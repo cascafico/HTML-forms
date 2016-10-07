@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Segnala PDI camper</title>
+  <!--link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css"-->
+  <!--link rel="stylesheet" href="http://cascafico.altervista.org/suosm/css/PDIcamper.css"-->
+<!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+
+<!-- jQuery and jQuery Mobile -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+  <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+<!-- Extra Codiqa features -->
+  <!--script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script-->
+  <script src="geo.js"></script>
+  <script src="notes30.js"></script>  
+  <!--/script-->  
+</head>
+
+<body>
+<p>&nbsp;</p>
+<!-- Home -->
+<div id="page1" data-role="page">
+<div data-theme="a" data-role="header">
+<h2>PDI camper</h2>
+
+
+
+
+
+
+
+<div data-role="content"><form id="form">
+
+
+
+<div data-role="fieldcontain">
+<div class="ui-field-contain">
+    <label for="categoria">Categoria PDI:</label>
+    <select name="categoria" id="categoria">
+        <option value="Area Attrezzata">Area Attrezzata</option>
+        <option value="Camper Service">Camper Service</option>
+        <option value="Punto Sosta">Punto Sosta</option>
+
+    </select>
+</div>
+
+<div data-role="fieldcontain"><label for="nome"> Nome </label> <input id="nome" name="nome" type="text" value="" placeholder="nome" data-mini="true" /></div>
+
+<div class="ui-field-contain">
+    <label for="fee">A pagamento</label>
+    <select name="fee" id="fee">
+        <option value="">Non so</option>
+		<option value="fee=yes">SI</option>
+        <option value="fee=no">NO</option>
+        
+
+    </select>
+</div>
+
+<!--div data-role="fieldcontain"><label for="Permanenza max"> Permanenza max </label> <input id="maxstay" name="maxstay" type="text" value="" placeholder="8-24..72 h(our) oppure w(eek)" data-mini="true" /></div-->
+
+<div class="ui-field-contain">
+    <label for="maxstay">Permanenza max (ore):</label>
+    <input type="range" name="maxstay" id="maxstay" value="" min="8" max="72" step="4" data-highlight="true">
+</div>
+
+<div class="ui-field-contain">
+    <label for="water">Presa acqua potabile</label>
+    <select name="water" id="water">
+        <option value="">Non so</option>
+		<option value="water_point=yes">SI</option>
+        <option value="water_point=no">NO</option>
+        <option value="drinking_water=yes">fontanella</option>
+
+    </select>
+</div>
+
+
+<div class="ui-field-contain">
+    <label for="dump">Scarico acque</label>
+    <select name="dump" id="dump">
+        <option value="">Non so</option>
+		<option value="sanitary_dump_station=yes">SI</option>
+        <option value="sanitary_dump_station=no">NO</option>
+        
+
+    </select>
+</div>
+
+<div class="ui-field-contain">
+    <label for="power">Elettricità</label>
+    <select name="power" id="power">
+	    <option value="">Non so</option>
+        <option value="power_supply=yes">SI</option>
+        <option value="power_supply=no">NO</option>
+        
+
+    </select>
+</div>
+
+<div class="ui-field-contain">
+    <label for="wc">WC</label>
+    <select name="wc" id="wc">
+        <option value="">Non so</option>
+		<option value="toilets=yes">SI</option>
+        <option value="toilets=no">NO</option>
+        
+
+    </select>
+</div>
+
+<div class="ui-field-contain">
+    <label for="picnic">Area picnic</label>
+    <select name="picnic" id="picnic">
+        <option value="">Non so</option>
+		<option value="picnic_area=yes">SI</option>
+        <option value="picnic_area=no">NO</option>
+        
+
+    </select>
+</div>
+
+
+</div>
+
+
+<div data-role="fieldcontain"><label for="tel"> Numero di Telefono </label> <!-- con number il placeholder non funziona--> <input id="tel" name="tel" type="text" value="" placeholder="+39 0771 513xxx" data-mini="true" /></div>
+<div data-role="fieldcontain"><label for="web"> Sito Web </label> <input id="web" name="web" type="text" value="" placeholder="www..." data-mini="true" /></div>
+<div data-role="fieldcontain"><label for="note"> Note </label> <textarea id="note" name="note" placeholder="periodo di apertura, BBQ, parcogiochi..."></textarea></div>
+<div id="geo">&nbsp;</div>
+<input type="submit" value="Invia" data-theme="a" /></form></div>
+</div>
+</body>
+</html>
