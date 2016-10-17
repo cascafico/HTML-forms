@@ -13,7 +13,7 @@ $( document ).ready(function(){
 			  
 			  //if (maxstay != null) var permanenza="maxstay="+$("#maxstay").val()+" hours";
 		      
-			  var testo="[PDI camper]"+"\nname="+$("#categoria").val()
+			  var testo="PDI camper"+"\nname="+$("#categoria").val()
                                       +" "+$("#nome").val()
                                       +"\nmaxstay="+$("#maxstay").val()+" hours"
                                       +"\n"+$("#fee").val()
